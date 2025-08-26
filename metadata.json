@@ -1,0 +1,5 @@
+{
+  "name": "Age Calculator",
+  "description": "A simple and elegant age calculator that tells you your exact age in years, months, and days, and also shows you how many days are left until your next birthday.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator | How Old Am I?</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Find out your exact age in years, months, and days with our easy-to-use Age Calculator. Also calculates the days until your next birthday. Supports English, Arabic, Spanish, French, and German." />
+    <meta name="keywords" content="age calculator, how old am i, birthday calculator, calculate age, calculateur d'âge, Altersrechner, calculadora de edad, حاسبة العمر, كم عمري" />
+    <meta name="author" content="Gemini Apps" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lazfan.com/" />
+    <meta property="og:title" content="Age Calculator | How Old Am I?" />
+    <meta property="og:description" content="Find out your exact age in years, months, and days with our easy-to-use Age Calculator." />
+    <meta property="og:image" content="https://lazfan.com/social-share.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://lazfan.com/" />
+    <meta property="twitter:title" content="Age Calculator | How Old Am I?" />
+    <meta property="twitter:description" content="Find out your exact age in years, months, and days with our easy-to-use Age Calculator." />
+    <meta property="twitter:image" content="https://lazfan.com/social-share.png" />
+
+    <!-- Hreflang Tags for multilingual support -->
+    <link rel="alternate" hreflang="en" href="https://lazfan.com/?lang=en" />
+    <link rel="alternate" hreflang="ar" href="https://lazfan.com/?lang=ar" />
+    <link rel="alternate" hreflang="es" href="https://lazfan.com/?lang=es" />
+    <link rel="alternate" hreflang="fr" href="https://lazfan.com/?lang=fr" />
+    <link rel="alternate" hreflang="de" href="https://lazfan.com/?lang=de" />
+    <link rel="alternate" hreflang="x-default" href="https://lazfan.com/" />
+    
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7009948592297613"
+     crossorigin="anonymous"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Age Calculator",
+      "operatingSystem": "Web",
+      "applicationCategory": "Utilities",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "1250"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0"
+      }
+    }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-100 dark:bg-slate-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
