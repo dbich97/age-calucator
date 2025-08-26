@@ -1,8 +1,11 @@
-
 import React, { useState } from 'react';
 import { type AgeResult } from '../types';
 import { ShareIcon } from './icons/ShareIcon';
 import { CakeIcon } from './icons/CakeIcon';
+import { CalendarIcon } from './icons/CalendarIcon';
+import { ClockIcon } from './icons/ClockIcon';
+import { TrendingUpIcon } from './icons/TrendingUpIcon';
+import { TargetIcon } from './icons/TargetIcon';
 
 interface ResultCardProps {
   result: AgeResult;
@@ -21,14 +24,14 @@ const ResultCard: React.FC<ResultCardProps> = ({ result, t, isVisible }) => {
   } = result;
 
   const summaryItems = [
-      { label: t('summary_birth_date'), value: birthDate },
-      { label: t('summary_day_of_birth'), value: birthDayOfWeek },
-      { label: t('summary_age_in_days'), value: totalDays.toLocaleString() },
-      { label: t('summary_age_in_months'), value: totalMonths.toLocaleString() },
-      { label: t('summary_age_in_weeks'), value: totalWeeks.toLocaleString() },
-      { label: t('summary_next_birthday_date'), value: nextBirthdayDate },
-      { label: t('summary_next_birthday_weekday'), value: nextBirthdayDayOfWeek },
-      { label: t('summary_days_remaining'), value: nextBirthdayDays.toLocaleString() },
+      { icon: <CalendarIcon className="w-5 h-5 text-blue-500 flex-shrink-0"/>, label: t('summary_birth_date'), value: birthDate },
+      { icon: <CalendarIcon className="w-5 h-5 text-blue-500 flex-shrink-0"/>, label: t('summary_day_of_birth'), value: birthDayOfWeek },
+      { icon: <ClockIcon className="w-5 h-5 text-purple-500 flex-shrink-0"/>, label: t('summary_age_in_days'), value: totalDays.toLocaleString() },
+      { icon: <TrendingUpIcon className="w-5 h-5 text-purple-500 flex-shrink-0"/>, label: t('summary_age_in_months'), value: totalMonths.toLocaleString() },
+      { icon: <TrendingUpIcon className="w-5 h-5 text-purple-500 flex-shrink-0"/>, label: t('summary_age_in_weeks'), value: totalWeeks.toLocaleString() },
+      { icon: <TargetIcon className="w-5 h-5 text-green-500 flex-shrink-0"/>, label: t('summary_next_birthday_date'), value: nextBirthdayDate },
+      { icon: <TargetIcon className="w-5 h-5 text-green-500 flex-shrink-0"/>, label: t('summary_next_birthday_weekday'), value: nextBirthdayDayOfWeek },
+      { icon: <TargetIcon className="w-5 h-5 text-green-500 flex-shrink-0"/>, label: t('summary_days_remaining'), value: nextBirthdayDays.toLocaleString() },
   ];
 
   const fullResultString = `${t('result_intro')} ${years} ${t('result_years')}, ${months} ${t('result_months')} ${t('result_and')} ${days} ${t('result_days')}.
@@ -87,15 +90,15 @@ ${summaryItems.map(item => `${item.label}: ${item.value}`).join('\n')}`;
         <div className="flex justify-center items-end gap-x-3 sm:gap-x-5 text-center mb-6">
           <div>
             <span className="text-6xl sm:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 leading-none">{years}</span>
-            <span className="block text-sm sm:text-base text-gray-500 dark:text-gray-400 mt-1">{t('result_years')}</span>
+            <span className="block text-base sm:text-lg text-gray-500 dark:text-gray-400 mt-2">{t('result_years')}</span>
           </div>
           <div>
             <span className="text-6xl sm:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 leading-none">{months}</span>
-            <span className="block text-sm sm:text-base text-gray-500 dark:text-gray-400 mt-1">{t('result_months')}</span>
+            <span className="block text-base sm:text-lg text-gray-500 dark:text-gray-400 mt-2">{t('result_months')}</span>
           </div>
           <div>
             <span className="text-6xl sm:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 leading-none">{days}</span>
-            <span className="block text-sm sm:text-base text-gray-500 dark:text-gray-400 mt-1">{t('result_days')}</span>
+            <span className="block text-base sm:text-lg text-gray-500 dark:text-gray-400 mt-2">{t('result_days')}</span>
           </div>
         </div>
 
@@ -113,7 +116,10 @@ ${summaryItems.map(item => `${item.label}: ${item.value}`).join('\n')}`;
           <ul className="space-y-3 text-base">
             {summaryItems.map(item => (
               <li key={item.label} className="flex justify-between items-center p-3 bg-slate-100 dark:bg-slate-700/50 rounded-lg">
-                <span className="font-medium text-gray-600 dark:text-gray-300">{item.label}</span>
+                <div className="flex items-center gap-3">
+                    {item.icon}
+                    <span className="font-medium text-gray-600 dark:text-gray-300">{item.label}</span>
+                </div>
                 <span className="font-bold text-gray-900 dark:text-white text-right">{item.value}</span>
               </li>
             ))}
