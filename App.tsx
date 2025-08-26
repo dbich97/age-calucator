@@ -321,7 +321,6 @@ const App: React.FC = () => {
     }
     
     // Update hreflang links for SEO
-    // FIX: This comparison appears to be unintentional because the types have no overlap.
     const hash = currentPage === 'home' ? '' : `#${currentPage}`;
     SUPPORTED_LANGUAGES.forEach(lang => {
         const link = document.querySelector(`link[rel="alternate"][hreflang="${lang.code}"]`);
