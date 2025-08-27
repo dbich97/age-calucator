@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://lazfan.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lazfan.com/en"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://lazfan.com/ar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lazfan.com/fr"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lazfan.com/es"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://lazfan.com/tr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lazfan.com/de"/>
+  </url>
+
+  <url><loc>https://lazfan.com/en</loc></url>
+  <url><loc>https://lazfan.com/en#about</loc></url>
+  <url><loc>https://lazfan.com/en#privacy</loc></url>
+  <url><loc>https://lazfan.com/en#contact</loc></url>
+
+  <url><loc>https://lazfan.com/ar</loc></url>
+  <url><loc>https://lazfan.com/ar#about</loc></url>
+  <url><loc>https://lazfan.com/ar#privacy</loc></url>
+  <url><loc>https://lazfan.com/ar#contact</loc></url>
+
+  <url><loc>https://lazfan.com/fr</loc></url>
+  <url><loc>https://lazfan.com/fr#about</loc></url>
+  <url><loc>https://lazfan.com/fr#privacy</loc></url>
+  <url><loc>https://lazfan.com/fr#contact</loc></url>
+
+  <url><loc>https://lazfan.com/es</loc></url>
+  <url><loc>https://lazfan.com/es#about</loc></url>
+  <url><loc>https://lazfan.com/es#privacy</loc></url>
+  <url><loc>https://lazfan.com/es#contact</loc></url>
+
+  <url><loc>https://lazfan.com/tr</loc></url>
+  <url><loc>https://lazfan.com/tr#about</loc></url>
+  <url><loc>https://lazfan.com/tr#privacy</loc></url>
+  <url><loc>https://lazfan.com/tr#contact</loc></url>
+
+  <url><loc>https://lazfan.com/de</loc></url>
+  <url><loc>https://lazfan.com/de#about</loc></url>
+  <url><loc>https://lazfan.com/de#privacy</loc></url>
+  <url><loc>https://lazfan.com/de#contact</loc></url>
+</urlset>
