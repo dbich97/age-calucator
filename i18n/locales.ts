@@ -457,4 +457,95 @@ export const locales: LocaleData = {
     contact_p2: 'Sie können uns per E-Mail unter folgender Adresse erreichen:',
     contact_email: 'support@lazfan.com',
   },
+  tr: {
+    // General
+    title: 'Yaş Hesaplayıcı',
+    subtitle: 'Tam yaşınızı öğrenmek için doğum tarihinizi girin.',
+    footer_rights: 'Tüm hakları saklıdır.',
+    
+    // Navigation
+    nav_home: 'Anasayfa',
+    nav_about: 'Hakkımızda',
+    nav_privacy: 'Gizlilik Politikası',
+    nav_contact: 'İletişim',
+
+    // Home Page SEO Meta
+    home_html_title: 'Yaş Hesaplayıcı | Kaç Yaşındayım? | Doğum Günü Hesap Makinesi',
+    home_meta_description: "Ücretsiz çevrimiçi yaş hesaplayıcımızla yaşınızı yıl, ay ve gün olarak doğru bir şekilde hesaplayın. 'Kaç yaşındayım' diye öğrenin ve bir sonraki doğum gününüze geri sayım yapın.",
+    
+    // Calculator
+    button_calculate: 'Yaşı Hesapla',
+    label_day: 'Gün',
+    label_month: 'Ay',
+    label_year: 'Yıl',
+    calendar_gregorian: 'Miladi',
+    calendar_hijri: 'Hicri',
+    
+    // Months
+    month_1: 'Ocak', month_2: 'Şubat', month_3: 'Mart', month_4: 'Nisan', month_5: 'Mayıs', month_6: 'Haziran', month_7: 'Temmuz', month_8: 'Ağustos', month_9: 'Eylül', month_10: 'Ekim', month_11: 'Kasım', month_12: 'Aralık',
+    hijri_month_1: 'Muharrem', hijri_month_2: 'Safer', hijri_month_3: 'Rebiülevvel', hijri_month_4: 'Rebiülahir', hijri_month_5: 'Cemaziyelevvel', hijri_month_6: 'Cemaziyelahir', hijri_month_7: 'Recep', hijri_month_8: 'Şaban', hijri_month_9: 'Ramazan', hijri_month_10: 'Şevval', hijri_month_11: 'Zilkade', hijri_month_12: 'Zilhicce',
+    
+    // Results
+    result_intro: 'Sen',
+    result_years: 'yıl',
+    result_months: 'ay',
+    result_and: 've',
+    result_days: 'günlüksün',
+    share_result: 'Sonucu Paylaş',
+    copy_result: 'Sonucu Kopyala',
+    copied_success: 'Panoya kopyalandı!',
+    summary_title: 'Yaş Özeti',
+    summary_birth_date: 'Doğum Tarihi',
+    summary_day_of_birth: 'Doğum Günü',
+    summary_age_in_months: 'Aylarla Yaş',
+    summary_age_in_weeks: 'Haftalarla Yaş',
+    summary_age_in_days: 'Günlerle Yaş',
+    summary_next_birthday_date: 'Sonraki Doğum Günü Tarihi',
+    summary_next_birthday_weekday: 'Sonraki Doğum Günü',
+    summary_days_remaining: 'Kalan Gün Sayısı',
+    countdown_happy_birthday: 'Doğum Günün Kutlu Olsun!',
+    countdown_tomorrow: 'Doğum günün yarın!',
+    countdown_days_remaining: 'Bir sonraki doğum gününe {days} gün kaldı!',
+    
+    // Errors
+    error_date_required: 'Lütfen doğum tarihinizi girin.',
+    error_future_date: 'Doğum tarihi gelecekte olamaz.',
+    error_invalid_date: 'Lütfen geçerli bir tarih girin.',
+    
+    // Home Page Content
+    seo_content_title: 'Yaş Hesaplama İçin Kapsamlı Rehberiniz',
+    seo_title_gregorian: 'Miladi Yaş Hesaplama: Küresel Standart',
+    seo_p_gregorian: "Aracımız, dünya çapında kullanılan Miladi takvime göre yaşınızı hesaplamayı kolaylaştırır. Yıl, ay ve gün olarak kesin bir sonuç almak için sadece doğum gününüzü, ayınızı ve yılınızı girin. Birkaç tıklamayla tam olarak 'kaç yaşındayım' öğrenin.",
+    seo_title_hijri: 'Hicri Yaş Hesaplama: Kültürel Bir Miras',
+    seo_p_hijri: "İslami takvimi takip edenler için hassas bir Hicri yaş hesaplaması sunuyoruz. Hicri seçeneğini seçin, doğum tarihinizi girin ve ay takvimine göre yaşınızı keşfedin. Kültürel köklerinizle bağ kurmanın mükemmel bir yolu.",
+    seo_title_details: 'Doğum Gününüz Hakkında Daha Fazla Bilgi Edinin',
+    seo_p_details: "Sadece yaşınızın ötesinde, hesaplayıcımız bir sonraki doğum gününüze kaç gün kaldığını söyler ve doğduğunuz haftanın tam gününü ortaya çıkarır. Özel gününüzle ilgili bilmeniz gereken her şey, hepsi bir arada.",
+    fun_fact_title: 'İnanılmaz Doğum Günü Gerçekleri',
+    fun_fact_1: "Sadece 23 kişilik bir odada, ikisinin aynı doğum gününü paylaşma ihtimalinin %50 olduğunu biliyor muydunuz? Bu, Doğum Günü Paradoksu olarak bilinir.",
+    fun_fact_2: "Vietnam'da herkes doğum gününü aynı gün kutlar: 'Tết' olarak bilinen Yılbaşı Günü. Gerçekte ne zaman doğduklarına bakılmaksızın, herkes bu günde bir yaş daha büyür.",
+
+    // About Page
+    about_html_title: 'Hakkımızda | Yaş Hesaplayıcı',
+    about_meta_description: 'Yaş Hesaplayıcı hakkında daha fazla bilgi edinin, herkes için basit, doğru ve güzel tasarlanmış bir araç sağlama misyonumuz.',
+    about_title: 'Hakkımızda',
+    about_p1: 'Webdeki en hızlı, en güzel ve en kolay kullanımlı yaş hesaplama aracını yaratma gibi basit bir fikirden doğan bir proje olan Yaş Hesaplayıcı\'ya hoş geldiniz.',
+    about_p2: 'Misyonumuz, herkesin, her yerde, tam yaşını belirlemesine veya zaman farklarını hassasiyetle hesaplamasına yardımcı olan ücretsiz, erişilebilir ve çok dilli bir araç sağlamaktır. Temiz tasarıma, kullanıcı gizliliğine ve keyifli bir deneyim sunmaya inanıyoruz.',
+    about_p3: 'Bu araç, hızlı, güvenilir ve her cihazda mükemmel çalışmasını sağlamak için modern teknoloji ile oluşturulmuştur. Umarız faydalı bulursunuz!',
+
+    // Privacy Policy Page
+    privacy_html_title: 'Gizlilik Politikası | Yaş Hesaplayıcı',
+    privacy_meta_description: 'Gizlilik politikamızı okuyun. Gizliliğinize saygı duyuyoruz. Yaş Hesaplayıcımız tüm hesaplamaları tarayıcınızda yapar ve herhangi bir kişisel veri toplamaz.',
+    privacy_title: 'Gizlilik Politikası',
+    privacy_p1: 'Gizliliğiniz bizim için son derece önemlidir. Yaş Hesaplayıcı olarak birkaç temel prensibimiz var:',
+    privacy_p2: 'Kişisel bilgilerinizi istemiyoruz, toplamıyoruz veya saklamıyoruz. Girdiğiniz doğum tarihi yalnızca hesaplama için kullanılır ve asla sunucularımıza gönderilmez veya herhangi bir yere kaydedilmez. Tüm hesaplamalar doğrudan web tarayıcınızda gerçekleşir.',
+    privacy_p3: 'Herhangi bir veri toplamadığımız için, üçüncü taraflarla herhangi bir veri paylaşmıyoruz. Bu web sitesini kullanımınız tamamen anonimdir. localStorage\'ı yalnızca size kolaylık sağlamak için dil tercihinizi kaydetmek için kullanırız.',
+
+    // Contact Page
+    contact_html_title: 'İletişim | Yaş Hesaplayıcı',
+    contact_meta_description: 'Yaş Hesaplayıcı ekibiyle iletişime geçin. Geri bildirimlerinizi, önerilerinizi ve sorularınızı memnuniyetle karşılıyoruz.',
+    contact_title: 'Bize Ulaşın',
+    contact_p1: 'Kullanıcılarımızdan haber almayı seviyoruz! Herhangi bir geri bildiriminiz, yeni özellikler için önerileriniz varsa veya sadece merhaba demek isterseniz, lütfen bizimle iletişime geçmekten çekinmeyin.',
+    contact_p2: 'Bize e-posta yoluyla ulaşabilirsiniz:',
+    contact_email: 'support@lazfan.com',
+  },
 };

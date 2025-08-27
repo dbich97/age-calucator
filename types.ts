@@ -1,5 +1,5 @@
 
-export type Language = 'en' | 'ar' | 'fr' | 'es' | 'de';
+export type Language = 'en' | 'ar' | 'fr' | 'es' | 'de' | 'tr';
 export type CalendarType = 'gregorian' | 'hijri';
 
 export interface AgeResult {

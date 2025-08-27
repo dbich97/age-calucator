@@ -7,6 +7,7 @@ export const SUPPORTED_LANGUAGES: { code: Language; name: string }[] = [
   { code: 'es', name: 'Español' },
   { code: 'fr', name: 'Français' },
   { code: 'de', name: 'Deutsch' },
+  { code: 'tr', name: 'Türkçe' },
 ];
 
 export const DEFAULT_LANGUAGE: Language = 'en';

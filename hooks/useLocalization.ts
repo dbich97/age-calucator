@@ -6,11 +6,10 @@ import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from '../constants';
 
 const getInitialLanguage = (): Language => {
     if (typeof window !== 'undefined') {
-        // 1. Check for URL parameter
-        const urlParams = new URLSearchParams(window.location.search);
-        const langFromUrl = urlParams.get('lang') as Language;
-        if (langFromUrl && SUPPORTED_LANGUAGES.some(l => l.code === langFromUrl)) {
-            return langFromUrl;
+        // 1. Check for URL path
+        const pathLang = window.location.pathname.split('/')[1] as Language;
+        if (pathLang && SUPPORTED_LANGUAGES.some(l => l.code === pathLang)) {
+            return pathLang;
         }
 
         // 2. Check for stored language in localStorage
@@ -33,9 +32,15 @@ export const useLocalization = () => {
     const [language, setLanguageState] = useState<Language>(getInitialLanguage);
 
     const setLanguage = useCallback((lang: Language) => {
-        setLanguageState(lang);
         if (typeof window !== 'undefined') {
-            localStorage.setItem('language', lang);
+            const currentHash = window.location.hash || '';
+            const pathSegments = window.location.pathname.split('/').filter(Boolean);
+            const currentLang = pathSegments[0];
+
+            if (lang !== currentLang) {
+                localStorage.setItem('language', lang);
+                window.location.href = `/${lang}${currentHash}`;
+            }
         }
     }, []);
 

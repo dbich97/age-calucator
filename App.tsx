@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useCallback } from 'react';
 import { useLocalization } from './hooks/useLocalization';
 import { type AgeResult, type CalendarType, type Language } from './types';
@@ -235,11 +236,11 @@ const Header: React.FC<{ t: (key: string) => string; language: Language; setLang
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <a href="#home" className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">{t('title')}</a>
+            <a href={`/${language}#home`} className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">{t('title')}</a>
           </div>
           <div className="hidden md:flex items-center space-x-4">
             {navLinks.map(link => (
-              <a key={link.page} href={`#${link.page}`} className={`px-3 py-2 rounded-md text-sm font-medium ${currentPage === link.page ? 'text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'}`}>{t(link.key)}</a>
+              <a key={link.page} href={`/${language}#${link.page}`} className={`px-3 py-2 rounded-md text-sm font-medium ${currentPage === link.page ? 'text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'}`}>{t(link.key)}</a>
             ))}
             <LanguageSwitcher currentLanguage={language} setLanguage={setLanguage} />
           </div>
@@ -260,7 +261,7 @@ const Header: React.FC<{ t: (key: string) => string; language: Language; setLang
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navLinks.map(link => (
-                 <a key={link.page} href={`#${link.page}`} onClick={() => setIsMenuOpen(false)} className={`block px-3 py-2 rounded-md text-base font-medium ${currentPage === link.page ? 'text-blue-600 dark:text-blue-400 bg-gray-100 dark:bg-gray-700' : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700/50'}`}>{t(link.key)}</a>
+                 <a key={link.page} href={`/${language}#${link.page}`} onClick={() => setIsMenuOpen(false)} className={`block px-3 py-2 rounded-md text-base font-medium ${currentPage === link.page ? 'text-blue-600 dark:text-blue-400 bg-gray-100 dark:bg-gray-700' : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700/50'}`}>{t(link.key)}</a>
               ))}
             </div>
           </div>
@@ -270,15 +271,15 @@ const Header: React.FC<{ t: (key: string) => string; language: Language; setLang
   );
 };
 
-const Footer: React.FC<{ t: (key: string) => string }> = ({ t }) => {
+const Footer: React.FC<{ t: (key: string) => string; language: Language; }> = ({ t, language }) => {
   return (
     <footer className="w-full bg-white dark:bg-slate-800 mt-12 border-t border-slate-200 dark:border-slate-700">
         <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
             <div className="flex justify-center space-x-6 mb-4">
-                <a href="#home" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">{t('nav_home')}</a>
-                <a href="#about" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">{t('nav_about')}</a>
-                <a href="#privacy" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">{t('nav_privacy')}</a>
-                <a href="#contact" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">{t('nav_contact')}</a>
+                <a href={`/${language}#home`} className="text-gray-500 hover:text-gray-900 dark:hover:text-white">{t('nav_home')}</a>
+                <a href={`/${language}#about`} className="text-gray-500 hover:text-gray-900 dark:hover:text-white">{t('nav_about')}</a>
+                <a href={`/${language}#privacy`} className="text-gray-500 hover:text-gray-900 dark:hover:text-white">{t('nav_privacy')}</a>
+                <a href={`/${language}#contact`} className="text-gray-500 hover:text-gray-900 dark:hover:text-white">{t('nav_contact')}</a>
             </div>
             <p className="mt-4 text-sm text-gray-400">&copy; {new Date().getFullYear()} {t('title')}. {t('footer_rights')}</p>
         </div>
@@ -325,12 +326,12 @@ const App: React.FC = () => {
     SUPPORTED_LANGUAGES.forEach(lang => {
         const link = document.querySelector(`link[rel="alternate"][hreflang="${lang.code}"]`);
         if (link) {
-            link.setAttribute('href', `https://lazfan.com/?lang=${lang.code}${hash}`);
+            link.setAttribute('href', `https://lazfan.com/${lang.code}${hash}`);
         }
     });
     const defaultLink = document.querySelector(`link[rel="alternate"][hreflang="x-default"]`);
     if (defaultLink) {
-        defaultLink.setAttribute('href', `https://lazfan.com/${hash}`);
+        defaultLink.setAttribute('href', `https://lazfan.com/en${hash}`);
     }
 
     window.scrollTo(0, 0);
@@ -356,7 +357,7 @@ const App: React.FC = () => {
           {renderPage()}
         </div>
       </div>
-      <Footer t={t} />
+      <Footer t={t} language={language} />
     </div>
   );
 };
