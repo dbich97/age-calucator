@@ -1,7 +1,0 @@
-{
-  "schemaVersion": 2,
-  "templateId": "node/18",
-  "buildCommand": "npm install && npm run build",
-  "startCommand": "npm start",
-  "containerHttpPort": "80"
-}
