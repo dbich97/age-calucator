@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://lazfan.com/</loc>
+  </url>
+
+  <!-- English -->
+  <url>
+    <loc>https://lazfan.com/en</loc>
+  </url>
+
+  <!-- Arabic -->
+  <url>
+    <loc>https://lazfan.com/ar</loc>
+  </url>
+
+  <!-- French -->
+  <url>
+    <loc>https://lazfan.com/fr</loc>
+  </url>
+
+  <!-- Spanish -->
+  <url>
+    <loc>https://lazfan.com/es</loc>
+  </url>
+
+  <!-- Turkish -->
+  <url>
+    <loc>https://lazfan.com/tr</loc>
+  </url>
+
+  <!-- German -->
+  <url>
+    <loc>https://lazfan.com/de</loc>
+  </url>
+</urlset>
